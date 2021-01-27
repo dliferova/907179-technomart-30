@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
 </head>
 
-<body class="catalog-page">
-    <header class="header catalog-page__header">
+<body class="page__body">
+
+    <header class="header">
         <!-- Секция поиска, корзины и оформления заказа-->
         <div class="header__panel">
             <a class="header__logo" aria-label="Перейти на главную" href="#">
-                <img src="#" width="220" height="47" alt="Логотоп интернет-магазина Техномарт">
+                <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотоп интернет-магазина Техномарт">
             </a>
             <form class="header__search" action="#" method="POST">
                 <input type="search" placeholder="Поиск:">
             </form>
             <div class="header__bookmarks">
-                <button class="header__bookmarks-button" type="button">Закладки: <span
-                        class="header__bookmarks-count">0</span></button>
+                <button class="header__bookmarks-button" type="button">Закладки:
+                    <span class="header__bookmarks-count">0</span>
+                </button>
             </div>
             <div class="header__cart">
                 <button class="header__cart-button" type="button">Корзина: <span class="cart-count">0</span></button>
@@ -50,13 +52,13 @@
         <nav class="header__nav main-nav">
             <ul class="main-nav__list">
                 <li class="main-nav__item">
-                    <span class="main-nav__item-content">Главная</span>
+                    <a class="main-nav__item-content" href="index.html">Главная</a>
                 </li>
                 <li class="main-nav__item">
                     <a class="main-nav__item-content" href="#">Компания</a>
                 </li>
-                <li class="main-nav__item">
-                    <a class="main-nav__item-content" href="catalog.html">Каталог</a>
+                <li class="main-nav__item main-nav__item--active">
+                    <a>Каталог</a>
                 </li>
                 <li class="main-nav__item">
                     <a class="main-nav__item-content" href="#">Новости</a>
@@ -74,24 +76,24 @@
         </nav>
     </header>
 
-    <main class="catalog catalog-page__main">
+    <main class="catalog">
         <h1 class="visually-hidden">Каталог перфораторов</h1>
 
-        <div class="catalog__breadcrumbs">
-            <ul class="catalog__breadcrumbs-list">
-                <li class="catalog__breadcrumbs-item">
-                    <a href="index.html" class="breadcrumbs__content">
+        <div class="breadcrumbs catalog__breadcrumbs">
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-item">
+                    <a class="breadcrumbs-content" href="index.html">
                         <img src="#" alt="Главная страница">
                     </a>
                 </li>
-                <li class="breadcrumbs__item">
-                    <a href="catalog.html" class="breadcrumbs__content">Каталог</a>
+                <li class="breadcrumbs-item">
+                    <a href="catalog.html" class="breadcrumbs-content">Каталог</a>
                 </li>
-                <li class="breadcrumbs__item">
-                    <a href="#" class="breadcrumbs__content">Инструмент</a>
+                <li class="breadcrumbs-item">
+                    <a href="#" class="breadcrumbs-content">Инструмент</a>
                 </li>
-                <li class="breadcrumbs__item">
-                    <span class="breadcrumbs__content">Перфораторы</span>
+                <li class="breadcrumbs-item">
+                    <span class="breadcrumbs-content">Перфораторы</span>
                 </li>
             </ul>
         </div>
@@ -100,7 +102,7 @@
             <h2 class="heading-title">Перфораторы</h2>
         </div>
 
-        <section class="catalog__filter-section filter-section">
+        <section class="filter-section catalog__filter-section">
             <h2 class="filter-section__title visually-hidden">Фильтр товаров</h2>
 
             <form method="get" class="filter-section__form">
@@ -117,7 +119,7 @@
                     </div>
                     <div class="filter-section__price-interval">
                         <p class="filter-section__price-start">0</p>
-                        <p class="filter-section__price-spacing">&#8211</p>
+                        <p class="filter-section__price-spacing">&#8211;</p>
                         <p class="filter-section__price-end">30000</p>
                     </div>
                 </fieldset>
@@ -165,86 +167,99 @@
             </form>
         </section>
 
-        <section class="catalog__sort">
+        <div class="catalog__sort">
             <span class="catalog__sort-text">Сортировка:</span>
             <ul class="catalog__sort-list">
                 <li class="catalog__sort-item">По цене</li>
                 <li class="catalog__sort-item">По типу</li>
                 <li class="catalog__sort-item">По функционалу</li>
             </ul>
-            <button class="catalog__sort-btn"></button>
-            <button class="catalog__sort-btn"></button>
-        </section>
+            <button class="catalog__sort-button"></button>
+            <button class="catalog__sort-button"></button>
+        </div>
 
         <section class="catalog__goods">
             <ul class="catalog__goods-list">
-                <li class="catalog__goods-item">
-                    <div class="catalog__goods-card good-card">
+                <li class="catalog__good-item">
+                    <div class="good-card catalog__good-card">
                         <h4 class="good-card__title">Перфоратор BOSCH BFG 6000</h4>
                         <s class="good-card__old-price">30500₽</s>
-                        <button type="button" class="good-card__new-price">25500₽</button>
+                        <a href="#" class="good-card__new-price">25500₽</a>
+                        <button type="button" class="good__add-to-cart">Купить</button>
+                        <button type="button" class="good__add-to-save">В закладки</button>
                     </div>
                 </li>
-                <li class="catalog__goods-item">
-                    <div class="catalog__goods-card good-card">
+                <li class="catalog__good-item">
+                    <div class="good-card catalog__good-card">
                         <h4 class="good-card__title">Перфоратор BOSCH BFG 6000</h4>
                         <s class="good-card__old-price">30500₽</s>
-                        <button type="button" class="good-card__new-price">25500₽</button>
+                        <a href="#" class="good-card__new-price">25500₽</a>
+                        <button type="button" class="good__add-to-cart">Купить</button>
+                        <button type="button" class="good__add-to-save">В закладки</button>
                     </div>
                 </li>
-                <li class="catalog__goods-item">
-                    <div class="catalog__goods-card good-card">
+                <li class="catalog__good-item">
+                    <div class="good-card catalog__good-card">
                         <h4 class="good-card__title">Перфоратор BOSCH BFG 6000</h4>
                         <s class="good-card__old-price">30500₽</s>
-                        <button type="button" class="good-card__new-price">25500₽</button>
+                        <a href="#" class="good-card__new-price">25500₽</a>
+                        <button type="button" class="good__add-to-cart">Купить</button>
+                        <button type="button" class="good__add-to-save">В закладки</button>
                     </div>
                 </li>
-                <li class="catalog__goods-item">
-                    <div class="catalog__goods-card good-card">
+                <li class="catalog__good-item">
+                    <div class="good-card catalog__good-card">
                         <h4 class="good-card__title">Перфоратор BOSCH BFG 3000</h4>
                         <s class="good-card__old-price">22500₽</s>
-                        <button type="button" class="good-card__new-price">15500₽</button>
+                        <a href="#" class="good-card__new-price">15500₽</a>
+                        <button type="button" class="good__add-to-cart">Купить</button>
+                        <button type="button" class="good__add-to-save">В закладки</button>
                     </div>
                 </li>
-                <li class="catalog__goods-item">
-                    <div class="catalog__goods-card good-card">
+                <li class="catalog__good-item">
+                    <div class="good-card catalog__good-card">
                         <h4 class="good-card__title">Перфоратор BOSCH BFG 6000</h4>
                         <s class="good-card__old-price">30500₽</s>
-                        <button type="button" class="good-card__new-price">25500₽</button>
+                        <a href="#" class="good-card__new-price">25500₽</a>
+                        <button type="button" class="good__add-to-cart">Купить</button>
+                        <button type="button" class="good__add-to-save">В закладки</button>
                     </div>
                 </li>
-                <li class="catalog__goods-item">
-                    <div class="catalog__goods-card good-card">
+                <li class="catalog__good-item">
+                    <div class="good-card catalog__good-card">
                         <h4 class="good-card__title">Перфоратор BOSCH BFG 2000</h4>
-                        <button type="button" class="good-card__new-price">12500₽</button>
+                        <a href="#" class="good-card__new-price">12500₽</a>
+                        <button type="button" class="good__add-to-cart">Купить</button>
+                        <button type="button" class="good__add-to-save">В закладки</button>
                     </div>
                 </li>
-                <li class="catalog__goods-item">
-                    <div class="catalog__goods-card good-card">
+                <li class="catalog__good-item">
+                    <div class="good-card catalog__good-card">
                         <h4 class="good-card__title">Перфоратор BOSCH BFG 3000</h4>
                         <s class="good-card__old-price">22500₽</s>
-                        <button type="button" class="good-card__new-price">15500₽</button>
+                        <a href="#" class="good-card__new-price">15500₽</a>
+                        <button type="button" class="good__add-to-cart">Купить</button>
+                        <button type="button" class="good__add-to-save">В закладки</button>
                     </div>
                 </li>
-                <li class="catalog__goods-item">
-                    <div class="catalog__goods-card good-card">
+                <li class="catalog__good-item">
+                    <div class="good-card catalog__good-card">
                         <h4 class="good-card__title">Перфоратор BOSCH BFG 6000</h4>
                         <s class="good-card__old-price">30500₽</s>
-                        <button type="button" class="good-card__new-price">25500₽</button>
+                        <a href="#" class="good-card__new-price">25500₽</a>
+                        <button type="button" class="good__add-to-cart">Купить</button>
+                        <button type="button" class="good__add-to-save">В закладки</button>
                     </div>
                 </li>
-                <li class="catalog__goods-item">
-                    <div class="catalog__goods-card good-card">
+                <li class="catalog__good-item">
+                    <div class="good-card catalog__good-card">
                         <h4 class="good-card__title">Перфоратор BOSCH BFG 2000</h4>
-                        <button type="button" class="good-card__new-price">12500₽</button>
+                        <a href="#" class="good-card__new-price">12500₽</a>
+                        <button type="button" class="good__add-to-cart">Купить</button>
+                        <button type="button" class="good__add-to-save">В закладки</button>
                     </div>
                 </li>
             </ul>
-            <!--При наведении на карточку товара она получает тень и кнопки вместо фото-->
-            <!-- 
-                          <button type="button" class="goods__in-basket">Купить</button>
-                          <button type="button" class="goods__in-select">В закладки</button> 
-                          -->
 
             <div class="catalog__pagination">
                 <ul class="catalog__pagination-list">
@@ -257,30 +272,25 @@
                     <li class="catalog__pagination-item">
                         <a href="#" visually-hidden="Перейти на третью страницу">3</a>
                     </li>
+                    <button class="catalog__pagination-button" type="button" value="Следующая">Следующая</button>
                 </ul>
-                <button class="catalog__pagination-button" type="button" value="Следующая">Следующая</button>
             </div>
         </section>
 
-        <section class="catalog__category-desc category-section">
-            <h2 class="category-section__title">Пара слов о перфораторах</h2>
-            <p class="category-section__text">Перфоратор — универсальный строительный инструмент. Предназначен для
-                сверления и
-                долбления отверстий в
-                кирпиче, бетоне и
-                камне.
-                Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
-                дрели,
-                шуруповерта и отбойного молотка.
-                В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
-                ударная дрель.</p>
+        <section class="good-description catalog__category-description">
+            <h2 class="good-description__title">Пара слов о перфораторах</h2>
+            <p class="good-description__text">Перфоратор — универсальный строительный инструмент. Предназначен для
+                сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и
+                пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного
+                молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный
+                молоток и ударная дрель.</p>
         </section>
     </main>
 
-    <footer class="footer catalog-page__footer">
+    <footer class="footer">
         <div class="footer__nav">
             <p class="footer__nav-logo">
-                <a class="logo footer-logo" aria-label="Перейти на главную страницу" href="index.html">
+                <a class="logo footer-logo" href="index.html" aria-label="Перейти на главную страницу">
                     <img src="#" alt="Логотоп Техномарт" width="220" height="70">
                 </a>
             </p>
@@ -291,8 +301,8 @@
                 <li class="footer-nav__item">
                     <a class="footer-nav__link" href="#">Новости</a>
                 </li>
-                <li class="footer-nav__item">
-                    <a class="footer-nav__link" href="catalog.html">Каталог</a>
+                <li class="main-nav__item main-nav__item--active">
+                    <a class="main-nav__item-content" href="#">Каталог</a>
                 </li>
                 <li class="footer-nav__item">
                     <a class="footer-nav__link" href="#">Доставка</a>
