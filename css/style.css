@@ -57,6 +57,7 @@
     --active-nav-item: #161D29;
     --text-grey: #A9A9A9;
     --basic-greylight: #C5C5C5;
+    --background-offers-card: #AD9B87;
     --light-grey: #EAEAEA;
     --basic-background: #F1F5F7;
     --header-background: #F3F7F9;
@@ -74,6 +75,8 @@
     --heading-color: #F9F5F0;
     --button-success: #5FBB2D;
     --button-click-green: #518534;
+    --button-outline-green: #367315;
+    --border-button: #E5E5E5;
     --button-warning: #FFBF47;
     --social-background: #212A3A;
     --background-catalog: #F7F3EC;
@@ -96,7 +99,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", sans-serif;
+    font-family: "Cuprum", arial, serif;
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
@@ -298,7 +301,7 @@ img {
 }
 
 .detailed-offers-card__item {
-    background-color: #AD9B87;
+    background-color: var(--background-offers-card);
 }
 
 .detailed-offers-card__title {
@@ -394,9 +397,9 @@ img {
     color: var(--basic-white);
     background-color: var(--basic-green);
     border-radius: 2px;
-    background-origin: inset 0px -3px 0px #367315;
+    background-origin: inset 0px -3px 0px var(--button-outline-green);
     border: none;
-    box-shadow: inset 0px -3px 0px #367315;
+    box-shadow: inset 0px -3px 0px var(--button-outline-green);
 }
 
 .good__add-to-cart:hover {
@@ -413,7 +416,7 @@ img {
     text-transform: uppercase;
     color: var(--text-darkblue);
     background-color: var(--basic-white);
-    border: 3px solid #63A63E;
+    border: 3px solid var(--basic-green);
 }
 
 .good__add-to-save:hover {
@@ -436,7 +439,7 @@ img {
 /* Карточка одной компании */
 
 .company-card {
-    border: 1px solid #EAEAEA;
+    border: 1px solid var(--light-grey);
     width: 220px;
     height: 145px;
 }
@@ -665,9 +668,6 @@ img {
     margin: 0;
     padding: 0;
     list-style: none;
-    width: 357px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .breadcrumbs__link {
@@ -708,16 +708,25 @@ img {
     list-style: none;
 }
 
+.sort-arrows__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Filters */
 
-.filter-section legend {
+.filter-section__price-legend,
+.filter-section__companies-legend,
+.filter-section__battery-legend {
   font-size: 17px;
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.filter-section ul {
+.filter-section__companies-list,
+.filter-section__battery-list {
   font-size: 18px;
   line-height: 19px;
   text-transform: uppercase;
@@ -726,11 +735,16 @@ img {
   padding: 0;
 }
 
-.filter-section__price-interval p {
+.filter-section__price-start,
+.filter-section__price-end {
+  border:none;
+  font-size: 17px;
+  line-height: 18px;
   background-color: var(--background-catalog);
+  width: 95px;
 }
 
-.catalog__sort-list {
+.catalog__sort-type-list {
   text-decoration-style: dotted;
 }
 
@@ -755,7 +769,7 @@ img {
   line-height: 18px;
   background-color: var(--basic-white);
   text-transform: uppercase;
-  border: 1px solid #E5E5E5;
+  border: 1px solid var(--border-button);
 }
 /*
 Секция каталога с товарами */
@@ -771,7 +785,7 @@ img {
 }
 
 .good-card {
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--light-grey);
   width: 220px;
 }
 
@@ -784,7 +798,7 @@ img {
   line-height: 18px;
   text-decoration: none;
   color: var(--basic-black);
-  border: 1px solid #E5E5E5;
+  border: 1px solid var(--border-button);
 }
 
 .catalog__pagination-button {
@@ -794,12 +808,12 @@ img {
 
 .catalog__pagination-item a:hover,
 .catalog__pagination-button:hover {
-  border: 1px solid #C5C5C5;
+  border: 1px solid var(--basic-greylight);
 }
 
 .catalog__pagination-item a:focus,
 .catalog__pagination-button:focus {
-  border: 1px solid #EE3643;
+  border: 1px solid var(--basic-red);
 }
 
 .catalog__pagination-item a:active,
@@ -819,5 +833,3 @@ img {
 .good-description__text {
   font-family: "PT Sans", "Arial", sans-serif;
 }
-
-

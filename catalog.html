@@ -113,7 +113,7 @@
           <a class="main-navigation__item-content" href="#">Компания</a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__item-content main-navigation__item--active">Каталог</a>
+          <a class="main-navigation__item-content main-navigation__item-content--active">Каталог</a>
         </li>
         <li class="main-navigation__item">
           <a class="main-navigation__item-content" href="#">Новости</a>
@@ -137,7 +137,7 @@
     <div class="breadcrumbs catalog__breadcrumbs">
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
-          <a class="breadcrumbs__content" href="index.html">
+          <a class="breadcrumbs__item-content" href="index.html">
             <img src="/img/icon-home.svg" alt="Главная страница">
           </a>
         </li>
@@ -154,7 +154,7 @@
     </div>
 
     <div class="catalog__category-heading">
-      <h2 class="heading-title">Перфораторы</h2>
+      <h1 class="heading-title">Перфораторы</h1>
     </div>
 
     <section class="filter-section catalog__filter-section">
@@ -168,7 +168,7 @@
 
         <div class="catalog__sort filter-section__sort">
           <span class="catalog__sort-text">Сортировка:</span>
-          <ul class="catalog__sort-list">
+          <ul class="catalog__sort-type-list">
             <li class="catalog__sort-item">
               <a class="catalog__sort-link catalog__sort-link--active" href="#" aria-label="Сортировать по цене">По
                 цене</a>
@@ -180,63 +180,80 @@
               <a class="catalog__sort-link" href="#" aria-label="Сортировать по функционалу">По функционалу</a>
             </li>
           </ul>
-          <button class="catalog__sort-button"></button>
-          <button class="catalog__sort-button"></button>
-        </div>
 
-        <fieldset class="filter-section__price">
-          <legend class="filter-section__price-legend">Цена:</legend>
-          <div class="filter-section__price-range">
-            <input type="range" id="input-min-price" name="range-min-price">
-            <input type="range" id="input-max-price" name="range-max-price">
+          <!-- Стрелки сортировки -->
+          <div class="catalog__sort-arrows sort-arrows">
+            <ul class="sort-arrows__list">
+              <li class="sort-arrows__ascending">
+                <a href="#" aria-label="Cортировка по возрастанию">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
+                  </svg>
+                </a>
+              </li>
+              <li class="sort-arrows__descending">
+                <a href="#" aria-label="Cортировка по убыванию">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 10L0 0H11" fill="#C5C5C5" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="filter-section__price-interval">
-            <p class="filter-section__price-start">0</p>
-            <p class="filter-section__price-spacing">&#8211;</p>
-            <p class="filter-section__price-end">30000</p>
-          </div>
-        </fieldset>
 
-        <fieldset class="filter-section__companies">
-          <legend class="filter-section__companies-legend">Производители:</legend>
-          <ul class="filter-section__companies-list">
-            <li class="filter-section__company-item">
-              <input type="checkbox" name="bosch" id="filter-bosch" checked>
-              <label for="filter-bosch">Bosch</label>
-            </li>
-            <li class="filter-section__company-item">
-              <input type="checkbox" name="interskol" id="filter-interskol">
-              <label for="filter-interskol">Интерскол</label>
-            </li>
-            <li class="filter-section__company-item">
-              <input type="checkbox" name="makita" id="filter-makita" checked>
-              <label for="filter-makita">Makita</label>
-            </li>
-            <li class="filter-section__company-item">
-              <input type="checkbox" name="dewalt" id="filter-dewalt">
-              <label for="filter-dewalt">Dewalt</label>
-            </li>
-            <li class="filter-section__company-item">
-              <input type="checkbox" name="hitachi" id="filter-hitachi">
-              <label for="filter-hitachi">Hitachi</label>
-            </li>
-          </ul>
-        </fieldset>
+          <fieldset class="filter-section__price">
+            <legend class="filter-section__price-legend">Цена:</legend>
+            <div class="filter-section__range-controls">
+              <input type="range" id="input-min-price" name="range-min-price">
+              <input type="range" id="input-max-price" name="range-max-price">
+            </div>
+            <div class="filter-section__price-interval">
+              <input class="filter-section__price-start" type="text" name="min-price" value="0"></input>
+              <p class="filter-section__price-spacing">&#8211;</p>
+              <input class="filter-section__price-end" type="text" name="max-price" value="30000"></input>
+            </div>
+          </fieldset>
 
-        <fieldset class="filter-section__battery">
-          <legend class="filter-section__battery-legend">Питание:</legend>
-          <ul class="filter-section__battery-list">
-            <li class="filter-section__battery-item">
-              <input type="radio" name="group" value="battery-feed" id="battery" checked>
-              <label for="battery">Аккумуляторные</label>
-            </li>
-            <li class="filter-section__battery-item">
-              <input type="radio" name="group" value="network-feed" id="network">
-              <label for="network">Сетевые</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="filter__form-button" type="submit">Показать</button>
+          <fieldset class="filter-section__companies">
+            <legend class="filter-section__companies-legend">Производители:</legend>
+            <ul class="filter-section__companies-list">
+              <li class="filter-section__company-item">
+                <input type="checkbox" name="bosch" id="filter-bosch" checked>
+                <label for="filter-bosch">Bosch</label>
+              </li>
+              <li class="filter-section__company-item">
+                <input type="checkbox" name="interskol" id="filter-interskol">
+                <label for="filter-interskol">Интерскол</label>
+              </li>
+              <li class="filter-section__company-item">
+                <input type="checkbox" name="makita" id="filter-makita" checked>
+                <label for="filter-makita">Makita</label>
+              </li>
+              <li class="filter-section__company-item">
+                <input type="checkbox" name="dewalt" id="filter-dewalt">
+                <label for="filter-dewalt">Dewalt</label>
+              </li>
+              <li class="filter-section__company-item">
+                <input type="checkbox" name="hitachi" id="filter-hitachi">
+                <label for="filter-hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="filter-section__battery">
+            <legend class="filter-section__battery-legend">Питание:</legend>
+            <ul class="filter-section__battery-list">
+              <li class="filter-section__battery-item">
+                <input type="radio" name="group" value="battery-feed" id="battery" checked>
+                <label for="battery">Аккумуляторные</label>
+              </li>
+              <li class="filter-section__battery-item">
+                <input type="radio" name="group" value="network-feed" id="network">
+                <label for="network">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="filter__form-button" type="submit">Показать</button>
       </form>
     </section>
 
