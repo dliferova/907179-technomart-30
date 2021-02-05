@@ -80,14 +80,12 @@
     --button-warning: #FFBF47;
     --social-background: #212A3A;
     --background-catalog: #F7F3EC;
-
 }
 
 /* Global */
 
 .visually-hidden {
 	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
 	padding:0 !important;
 	border:0 !important;
@@ -96,20 +94,38 @@
 	overflow: hidden;
 }
 
-body {
+.page__body {
+    min-width: 960px;
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", arial, serif;
+    font-family: "Cuprum", "Arial", "serif";
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
     color: var(--basic-black);
     background-color: var(--basic-white);
+
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: center;
 }
 
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* Container main page */
+
+.page {
+  height: 100%;
+}
+
+.main-page__container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 /* Main header */
@@ -118,6 +134,9 @@ img {
     font-size: 18px;
     line-height: 24px;
     background-color: var(--header-background);
+
+    margin-bottom: 60px;
+    display: grid;
 }
 
 /* Верхняя панель header  */
@@ -126,7 +145,15 @@ img {
     background-color: var(--footer-blue);
 }
 
-.main-header__logo {
+.main-header__panel-conteiner {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   width: 940px;
+   margin: auto;
+   padding: 0 10px;
+}
+
+.logo {
     background-color: var(--basic-red);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -185,11 +212,32 @@ img {
 
 /* Секция контакты, вход и регистрация */
 
+.main-header__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-header-content__lead {
+  align-self: center;
+}
+
+.main-header-content__contact-details {
+  align-self:center;
+}
+
+.main-header-content__user-login {
+  align-self:center;
+}
+
 .main-header__main-content-text {
     font-size: 16px;
     line-height: 23px;
     font-style: italic;
     color: var(--basic-red);
+    margin: 0;
 }
 
 /** Секция с телефоном и адресом */
@@ -233,14 +281,19 @@ img {
 
 /* Секция навигации */
 
-.main-navigation {
-    background-color: var(--text-darkblue);
+.main-navigation__wrapper {
+  display: grid;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
+
 
 .main-navigation__list {
     margin: 0;
     padding: 0;
     list-style: none;
+    background-color: var(--text-darkblue);
 }
 
 .main-navigation__item-content {
@@ -257,22 +310,51 @@ img {
     color: rgba(255, 255, 255, 0.5);
 }
 
+
+
 /* Секция каталога с карточками */
+
+.catalog-offers {
+  margin-bottom: 70px;
+}
 
 .сatalog-offers__list {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: 20px;
+}
+
+.catalog-offers__item:nth-child(4){
+  grid-column-start: 3;
+}
+
+.catalog-offers__item:nth-child(5){
+  grid-column-start: 3;
+}
+
+.catalog-offers__item:last-child {
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
 }
 
 .offer-card {
-    background-color: var(--special-yellow);
+  min-height: 123px;
+  position: relative;
 }
 
 .offer-card__title {
     color: var(--basic-white);
     font-size: 24px;
     line-height: 30px;
+
+    margin: 0;
+    margin-bottom: 14px;
+    padding-top: 20px;
+    padding-left: 22px;
 }
 
 .offer-card__link {
@@ -282,6 +364,9 @@ img {
     line-height: 18px;
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.3);
+
+    margin: 14px 0px 21px 22px;
+    padding: 10px 24px;
 }
 
 .offer-card__link:hover {
@@ -290,6 +375,64 @@ img {
 
 .offer-card__link:active {
     background-color: rgba(169, 169, 169, 0.3);
+}
+
+
+/* Окрашивание карточек каталога и добавление символа*/
+
+.offer-card_theme_materials {
+  background-color: var(--button-warning);
+}
+
+.offer-card_theme_materials::after {
+  content: url(/img/materials-icon.svg);
+  position: absolute;
+  right: 40px;
+  top: 25%;
+}
+
+.offer-card_theme_instrument {
+  background-color: var(--special-blue);
+}
+
+.offer-card_theme_instrument::after {
+  content: url(/img/tool-icon.svg);
+  position: absolute;
+  right: 40px;
+  top: 25%;
+}
+
+.offer-card_theme_tecnique {
+  background-color: var(--special-lilac);
+}
+
+.offer-card_theme_tecnique::after {
+  content: url(/img/techniks-icon.svg);
+  position: absolute;
+  right: 40px;
+  top: 25%;
+}
+
+.offer-card_theme_sales {
+  background-color: var(--special-greenlight);
+}
+
+.offer-card_theme_sales::after {
+  content: url(/img/sales-icon.svg);
+  position: absolute;
+  right: 40px;
+  top: 25%;
+}
+
+.offer-card_theme_delivery {
+  background-color: var(--special-yellowlight);
+}
+
+.offer-card_theme_delivery::after {
+  content: url(/img/delivery-icon.svg);
+  position: absolute;
+  right: 40px;
+  top: 25%;
 }
 
 /* Карточка слайдера */
@@ -304,17 +447,31 @@ img {
     background-color: var(--background-offers-card);
 }
 
+.catalog-offers__card-container {
+  position: relative;
+}
+
 .detailed-offers-card__title {
     font-size: 36px;
     line-height: 36px;
     color: var(--basic-white);
     text-transform: uppercase;
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 23px;
+    left: 24px;
 }
 
 .detailed-offers-card__lead {
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-white);
+
+    position: absolute;
+    top: 64px;
+    left: 24px;
 }
 
 .detailed-offers-card__link {
@@ -338,6 +495,7 @@ img {
 
 .sections__heading {
     background-color: var(--heading-color);
+    margin-bottom: 20px;
 }
 
 .sections__heading-title {
@@ -358,16 +516,25 @@ img {
 
 /* Секция популярные товары */
 
+.popular-goods{
+  display: grid;
+  margin-bottom: 70px;
+}
+
 .popular-goods__list {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 /* Карточка одного товара */
 
 .good-card {
-    font-family: "PT Sans", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", "sans-serif";
+    border: 1px solid #EAEAEA;
 }
 
 .good-card__title {
@@ -430,7 +597,15 @@ img {
 
 /* Секция популярные производители */
 
+.popular-companies {
+  display: grid;
+  margin-bottom: 70px;
+}
+
 .popular-companies__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -455,6 +630,20 @@ img {
 }
 
 /* Секция сервисы  */
+.services {
+  margin-bottom: 70px;
+}
+
+.services__wrapper {
+  width: 100%;
+}
+
+.services__description,
+.services__pager {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 
 .services {
     background-color: var(--basic-background);
@@ -468,7 +657,18 @@ img {
 }
 
 .services__lead {
-    font-family: "PT Sans", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", "sans-serif";
+}
+
+.services-pager {
+  display: grid;
+  grid-template-columns: min-content 1fr 1fr;
+  align-items: center;
+}
+
+.services-pager__items {
+   display: grid;
+   grid-template-rows: repeat(3, 1fr);
 }
 
 .services-pager__item {
@@ -478,6 +678,10 @@ img {
     background-color: var(--text-darkblue);
     border:none;
     outline: none;
+}
+
+.services-pager__card {
+  margin-left: 80px;
 }
 
 .services-pager__item:hover {
@@ -498,7 +702,7 @@ img {
 }
 
 .services-pager__card-description {
-    font-family: "PT Sans", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", "sans-serif";
 }
 
 
@@ -513,7 +717,7 @@ img {
 
 .company-info__text,
 .company-info__partners {
-    font-family: "PT Sans", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", "sans-serif";
 }
 
 .company-info__partner-list {
@@ -542,6 +746,12 @@ img {
 
 /* Секция контакты  */
 
+.about-us {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  margin-bottom: 70px;
+}
+
 .contacts__title {
     font-size: 30px;
     line-height: 30px;
@@ -550,7 +760,7 @@ img {
 }
 
 .contacts__text {
-    font-family: "PT Sans", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", "sans-serif";
 }
 
 .contacts__button {
@@ -577,8 +787,39 @@ img {
     background-color: var(--text-darkblue);
 }
 
+.footer__wrapper {
+  display: grid;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.footer__navigation {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.footer__info {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+}
+
+.footer__info-contacts {
+  min-width: 325px;
+  padding-left: 10px;
+}
+
 .footer__references {
     background-color: var(--footer-blue);
+    width: 100%;
+}
+
+.footer__references-conteiner {
+  display: grid;
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .footer__nav-list,
@@ -671,7 +912,7 @@ img {
 }
 
 .breadcrumbs__link {
-   font-family: "PT Sans", "Arial", sans-serif;
+   font-family: "PT Sans", "Arial", "sans-serif";
    line-height: 18px;
    text-decoration: none;
    text-transform: uppercase;
@@ -775,18 +1016,13 @@ img {
 Секция каталога с товарами */
 
 .catalog__goods {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", "sans-serif";
 }
 
 .catalog__goods ul {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.good-card {
-  border: 1px solid var(--light-grey);
-  width: 220px;
 }
 
 .catalog__pagination-list {
@@ -831,5 +1067,5 @@ img {
 }
 
 .good-description__text {
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", "sans-serif";
 }
