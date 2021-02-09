@@ -67,11 +67,10 @@
     --basic-green: #63A63E;
     --basic-white: #FFFFFF;
     --basic-black:#000000;
-    --special-yellow: #FFBF47;
-    --special-blue: #3BBCE3;
-    --special-lilac: #DC91D8;
-    --special-greenlight: #8ED78F;
-    --special-yellowlight: #FFD180;
+    --theme-orange: #FFBF47;
+    --theme-piction-blue: #3BBCE3;
+    --theme-light-orchid: #DC91D8;
+    --theme-feijoa: #8ED78F;
     --heading-color: #F9F5F0;
     --button-success: #5FBB2D;
     --button-click-green: #518534;
@@ -80,6 +79,7 @@
     --button-warning: #FFBF47;
     --social-background: #212A3A;
     --background-catalog: #F7F3EC;
+    --yellow-for-link: #FFD180;
 }
 
 /* Global */
@@ -98,7 +98,7 @@
     min-width: 960px;
     margin: 0;
     padding: 0;
-    font-family: "Cuprum", "Arial", "serif";
+    font-family: "Cuprum", "Arial", serif;
     font-size: 13px;
     line-height: 24px;
     font-weight: 400;
@@ -116,17 +116,20 @@ img {
     height: auto;
 }
 
-/* Container main page */
+/* Container index.html */
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Page */
 
 .page {
   height: 100%;
 }
 
-.main-page__container {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
 
 .page-catalog__container {
   width: 940px;
@@ -180,12 +183,9 @@ img {
     background-color: var(--footer-blue);
 }
 
-.main-header__panel-conteiner {
+.main-header__panel-container {
    display: grid;
    grid-template-columns: repeat(5, 1fr);
-   width: 940px;
-   margin: auto;
-   padding: 0 10px;
 }
 
 .logo {
@@ -250,9 +250,6 @@ img {
 .main-header__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 .main-header-content__lead {
@@ -314,7 +311,7 @@ img {
     outline: none;
 }
 
-/* Секция навигации */
+/* Navigation */
 
 .main-navigation__wrapper {
   display: grid;
@@ -349,7 +346,7 @@ img {
 
 /* Секция каталога с карточками */
 
-.catalog-offers {
+.main-page__catalog {
   margin-bottom: 70px;
 }
 
@@ -386,10 +383,7 @@ img {
     font-size: 24px;
     line-height: 30px;
 
-    margin: 0;
-    margin-bottom: 14px;
-    padding-top: 20px;
-    padding-left: 22px;
+    margin: 20px 0 14px 22px;
 }
 
 .offer-card__link {
@@ -412,62 +406,22 @@ img {
     background-color: rgba(169, 169, 169, 0.3);
 }
 
+/* Offer card background-color and position */
 
-/* Окрашивание карточек каталога и добавление символа*/
-
-.offer-card_theme_materials {
-  background-color: var(--button-warning);
+.offer-card_theme_orange {
+  background-color: var(--theme-orange);
 }
 
-.offer-card_theme_materials::after {
-  content: url(/img/materials-icon.svg);
-  position: absolute;
-  right: 40px;
-  top: 25%;
+.offer-card_theme_piction-blue {
+  background-color: var(--theme-piction-blue);
 }
 
-.offer-card_theme_instrument {
-  background-color: var(--special-blue);
+.offer-card_theme_light-orchid {
+  background-color: var(--theme-light-orchid);
 }
 
-.offer-card_theme_instrument::after {
-  content: url(/img/tool-icon.svg);
-  position: absolute;
-  right: 40px;
-  top: 25%;
-}
-
-.offer-card_theme_tecnique {
-  background-color: var(--special-lilac);
-}
-
-.offer-card_theme_tecnique::after {
-  content: url(/img/techniks-icon.svg);
-  position: absolute;
-  right: 40px;
-  top: 25%;
-}
-
-.offer-card_theme_sales {
-  background-color: var(--special-greenlight);
-}
-
-.offer-card_theme_sales::after {
-  content: url(/img/sales-icon.svg);
-  position: absolute;
-  right: 40px;
-  top: 25%;
-}
-
-.offer-card_theme_delivery {
-  background-color: var(--special-yellowlight);
-}
-
-.offer-card_theme_delivery::after {
-  content: url(/img/delivery-icon.svg);
-  position: absolute;
-  right: 40px;
-  top: 25%;
+.offer-card_theme_feijoa {
+  background-color: var(--theme-feijoa);
 }
 
 /* Карточка слайдера */
@@ -551,9 +505,12 @@ img {
 
 /* Секция популярные товары */
 
+.main-page__popular-goods {
+   margin-bottom: 70px;
+}
+
 .popular-goods{
   display: grid;
-  margin-bottom: 70px;
 }
 
 .popular-goods__list {
@@ -568,8 +525,8 @@ img {
 /* Карточка одного товара */
 
 .good-card {
-    font-family: "PT Sans", "Arial", "sans-serif";
-    border: 1px solid #EAEAEA;
+    font-family: "PT Sans", "Arial", sans-serif;
+    border: 1px solid var(--light-grey);
 }
 
 .good-card__title {
@@ -632,9 +589,12 @@ img {
 
 /* Секция популярные производители */
 
+.main-page__companies {
+  margin-bottom: 70px;
+}
+
 .popular-companies {
   display: grid;
-  margin-bottom: 70px;
 }
 
 .popular-companies__list {
@@ -665,34 +625,25 @@ img {
 }
 
 /* Секция сервисы  */
-.services {
-  margin-bottom: 70px;
-}
 
-.services__wrapper {
+.main-page__services {
+  margin-bottom: 70px;
   width: 100%;
 }
 
-.services__description,
-.services__pager {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
 .services {
-    background-color: var(--basic-background);
+  background-color: var(--basic-background);
 }
 
 .services__title {
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: normal;
-    text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .services__lead {
-    font-family: "PT Sans", "Arial", "sans-serif";
+    font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .services-pager {
@@ -737,7 +688,7 @@ img {
 }
 
 .services-pager__card-description {
-    font-family: "PT Sans", "Arial", "sans-serif";
+    font-family: "PT Sans", "Arial", sans-serif;
 }
 
 
@@ -752,7 +703,7 @@ img {
 
 .company-info__text,
 .company-info__partners {
-    font-family: "PT Sans", "Arial", "sans-serif";
+    font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .company-info__partner-list {
@@ -781,10 +732,13 @@ img {
 
 /* Секция контакты  */
 
+.main-page__about-us {
+  margin-bottom: 70px;
+}
+
 .about-us {
   display: grid;
   grid-template-columns: 1fr min-content;
-  margin-bottom: 70px;
 }
 
 .contacts__title {
@@ -795,7 +749,7 @@ img {
 }
 
 .contacts__text {
-    font-family: "PT Sans", "Arial", "sans-serif";
+    font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .contacts__button {
@@ -822,21 +776,16 @@ img {
     background-color: var(--text-darkblue);
 }
 
-.footer__wrapper {
-  display: grid;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
 .footer__navigation {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  margin-bottom: 20px;
 }
 
 .footer__info {
   display: grid;
   grid-template-columns: min-content 1fr;
+  margin-bottom: 40px;
 }
 
 .footer__info-contacts {
@@ -849,12 +798,11 @@ img {
     width: 100%;
 }
 
-.footer__references-conteiner {
+.footer__references-container {
   display: grid;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
 }
 
 .footer__nav-list,
@@ -877,7 +825,7 @@ img {
 .footer__info-link,
 .footer__feedback-link,
 .footer__authors-link {
-    color: var(--special-yellowlight);
+    color: var(--yellow-for-link);
     text-decoration: none;
 }
 
@@ -947,7 +895,7 @@ img {
 }
 
 .breadcrumbs__link {
-   font-family: "PT Sans", "Arial", "sans-serif";
+   font-family: "PT Sans", "Arial", sans-serif;
    line-height: 18px;
    text-decoration: none;
    text-transform: uppercase;
