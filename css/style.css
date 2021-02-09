@@ -130,7 +130,6 @@ img {
   height: 100%;
 }
 
-
 .page-catalog__container {
   width: 940px;
   margin: 0 auto;
@@ -140,15 +139,9 @@ img {
   align-content: start;
 }
 
-.page-catalog__container_full_screen{
+.page-catalog__container_full-screen{
   width: 100%;
   background-color: var(--basic-background);
-}
-
-.good-description {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 .page-catalog__breadcrumbs {
@@ -892,6 +885,10 @@ img {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.breadcrumbs__list::before {
+  content: url(/img/icon-home.svg);
 }
 
 .breadcrumbs__link {

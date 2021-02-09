@@ -13,12 +13,12 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="page__body inner-page">
+<body class="page__body">
 
   <header class="main-header">
     <!-- Секция поиска, корзины и оформления заказа-->
     <div class="main-header__panel">
-      <div class="main-header__panel-conteiner">
+      <div class="main-header__panel-container container">
         <a class="logo footer-logo" aria-label="Перейти на главную страницу" href="index.html">
           <img src="img/logo-technomart.svg" width="138" height="23" alt="Логотоп интернет-магазина Техномарт">
         </a>
@@ -69,7 +69,7 @@
       </div>
     </div>
     <!-- Секция контакты, вход и регистрация -->
-    <div class="main-header__content main-header-content">
+    <div class="main-header__content main-header-content container">
       <div class="main-header-content__lead">
         <p class="main-header__main-content-text">Интернет-магазин строительных материалов и инструментов для
           ремонта
@@ -142,9 +142,7 @@
       <div class="breadcrumbs page-catalog__breadcrumbs">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__item-content" href="index.html">
-              <img src="/img/icon-home.svg" alt="Главная страница">
-            </a>
+            <a class="breadcrumbs__item-content" href="index.html"></a>
           </li>
           <li class="breadcrumbs__item">
             <a href="#" class="breadcrumbs__link">Каталог</a>
@@ -153,7 +151,7 @@
             <a href="#" class="breadcrumbs__link">Инструмент</a>
           </li>
           <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Перфораторы</a>
+            <a class="breadcrumbs__link breadcrumbs__link--active">Перфораторы</a>
           </li>
         </ul>
       </div>
@@ -183,14 +181,14 @@
         <!-- Стрелки сортировки -->
         <div class="catalog__sort-arrows sort-arrows">
           <ul class="sort-arrows__list">
-            <li class="sort-arrows__ascending">
+            <li class="sort-arrows__item">
               <a href="#" aria-label="Cортировка по возрастанию">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
                 </svg>
               </a>
             </li>
-            <li class="sort-arrows__descending">
+            <li class="sort-arrows__item">
               <a href="#" aria-label="Cортировка по убыванию">
                 <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 10L0 0H11" fill="#C5C5C5" />
@@ -372,8 +370,8 @@
 
     </div>
 
-    <div class="page-catalog__container_full_screen">
-      <section class="good-description page-catalog__category-description">
+    <div class="page-catalog__container_full-screen">
+      <section class="good-description page-catalog__category-description container">
         <h2 class="good-description__title">Пара слов о перфораторах</h2>
         <p class="good-description__text">Перфоратор — универсальный строительный инструмент. Предназначен для
           сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и
@@ -386,10 +384,10 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__wrapper">
+    <div class="container">
       <div class="footer__navigation">
         <div class="footer__logo">
-          <a class="logo footer-logo" href="index.html" aria-label="Перейти на главную страницу">
+          <a class="logo" href="index.html" aria-label="Перейти на главную страницу">
             <img src="img/logo-technomart.svg" width="138" height="23" alt="Логотоп интернет-магазина Техномарт">
           </a>
         </div>
@@ -439,7 +437,7 @@
     </div>
 
     <div class="footer__references">
-      <div class="footer__references-conteiner">
+      <div class="footer__references-container container">
         <div class="footer__references-section-copyright">
           <p class="footer__references-copyright">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
         </div>
