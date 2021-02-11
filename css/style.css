@@ -122,6 +122,8 @@ img {
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
+
+  overflow: auto;
 }
 
 /* Page */
@@ -131,9 +133,6 @@ img {
 }
 
 .page-catalog__container {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
   display: grid;
   grid-template-columns: 220px 1fr;
   align-content: start;
@@ -157,7 +156,6 @@ img {
   outline-offset: -5px;
   margin-left: 20px;
 }
-
 
 /* Main header */
 
@@ -215,6 +213,14 @@ img {
     opacity: 0.5;
 }
 
+.main-header__place-order {
+  justify-self: end;
+}
+
+.main-header__place-order-button {
+  padding: 9px 17px;
+}
+
 .main-header__bookmarks-button,
 .main-header__cart-button,
 .main-header__place-order-button {
@@ -224,6 +230,8 @@ img {
     border:none;
     color: var(--basic-white);
     outline: none;
+
+    justify-self: end;
 }
 
 .main-header__place-order-button {
@@ -247,14 +255,18 @@ img {
 
 .main-header-content__lead {
   align-self: center;
-}
+  justify-self: start;
 
-.main-header-content__contact-details {
-  align-self:center;
+  width: 200px;
+  margin: 38px 0 44px 26px;
 }
 
 .main-header-content__user-login {
   align-self:center;
+  justify-self: end;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-header__main-content-text {
@@ -267,11 +279,25 @@ img {
 
 /** Секция с телефоном и адресом */
 
+.main-header-content__contact-details {
+  align-self:center;
+  justify-self: center;
+
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
 .main-header-content__contact-details-tel {
     font-size: 21px;
     line-height: 30px;
     text-decoration: none;
     color: var(--basic-red);
+}
+
+.main-header-content__contact-details-tel::before {
+  content: url(/img/icon-phone.svg);
+  margin-right: 15px;
 }
 
 .main-header-content__contact-details-address {
@@ -292,6 +318,15 @@ img {
     outline: none;
 }
 
+.main-header-content__user-login-button {
+  margin-right: 10px;
+  padding: 12px 27px 12px 19px;
+}
+
+.main-header-content__user-register-button {
+  padding: 12px 24px;
+}
+
 .main-header-content__user-login-button:hover,
 .main-header-content__user-register-button:hover {
     color: var(--basic-red);
@@ -307,18 +342,17 @@ img {
 /* Navigation */
 
 .main-navigation__wrapper {
-  display: grid;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
+  background-color: var(--text-darkblue);
+  overflow : auto;
 }
 
-
 .main-navigation__list {
-    margin: 0;
     padding: 0;
     list-style: none;
-    background-color: var(--text-darkblue);
+
+    display: flex;
+    justify-content: space-around;
+    margin: 16px auto 20px auto;
 }
 
 .main-navigation__item-content {
@@ -334,8 +368,6 @@ img {
     background-color: var(--footer-blue);
     color: rgba(255, 255, 255, 0.5);
 }
-
-
 
 /* Секция каталога с карточками */
 
@@ -474,6 +506,9 @@ img {
 .sections__heading {
     background-color: var(--heading-color);
     margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 .sections__heading-title {
@@ -481,6 +516,10 @@ img {
     line-height: 30px;
     font-weight: normal;
     color: var(--text-darkblue);
+
+    align-self: center;
+    margin: 29px 0px 30px 28px;
+
 }
 
 .sections__heading-link {
@@ -490,6 +529,12 @@ img {
     text-decoration: none;
     text-transform: uppercase;
     background-color: var(--basic-red);
+    text-align: center;
+
+    align-self: center;
+    min-width: 144px;
+    padding: 10px 24px;
+    margin-right: 14px;
 }
 
 /* Секция популярные товары */
@@ -518,15 +563,35 @@ img {
     border: 1px solid var(--light-grey);
 }
 
+.good-card__main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 6px 17px 21px 19px;
+}
+
+.good-card__image {
+  margin: 0;
+  width: 182px;
+  height: 164px;
+}
+
 .good-card__title {
     font-size: 18px;
     line-height: 20px;
+    text-align: center;
+
+    margin: 8px auto;
 }
 
 .good-card__old-price {
     font-size: 17px;
     line-height: 18px;
     color: var(--text-grey);
+
+    margin-bottom: 14px;
 }
 
 .good-card__new-price {
@@ -537,6 +602,18 @@ img {
     color: var(--basic-white);
     background-color: var(--basic-red);
 }
+
+.good-card__purchase-button {
+  display: none;
+}
+/*
+.good-card:hover .good-card__purchase-button {
+  display: flex;
+}
+
+.good-card:hover .good-card__main-info {
+  display: none;
+} */
 
 .good__add-to-cart {
     font-size: 14px;
@@ -599,8 +676,11 @@ img {
 
 .company-card {
     border: 1px solid var(--light-grey);
-    width: 220px;
     height: 145px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .company-card:hover {
@@ -624,26 +704,36 @@ img {
   background-color: var(--basic-background);
 }
 
+.services__description {
+  overflow: auto;
+  margin: 64px 0px 64px;
+}
+
 .services__title {
   font-size: 30px;
   line-height: 30px;
   font-weight: normal;
   text-transform: uppercase;
+
+  margin-bottom: 24px;
+  margin-top: 0;
 }
 
 .services__lead {
-    font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
+
+  margin: 0;
 }
 
 .services-pager {
   display: grid;
-  grid-template-columns: min-content 1fr 1fr;
-  align-items: center;
+  grid-template-columns: 1fr 2fr;
 }
 
 .services-pager__items {
    display: grid;
    grid-template-rows: repeat(3, 1fr);
+   margin-bottom: 92px;
 }
 
 .services-pager__item {
@@ -653,6 +743,16 @@ img {
     background-color: var(--text-darkblue);
     border:none;
     outline: none;
+    text-align: start;
+
+    min-width: 240px;
+    padding: 14px 0px 18px 22px;
+}
+
+.services-pager__item--active {
+    color: var(--text-darkblue);
+    background-color: var(--basic-white);
+    border: none;
 }
 
 .services-pager__card {
@@ -663,23 +763,22 @@ img {
     background-color: var(--footer-blue);
 }
 
-.services-pager__item--active {
-    color: var(--text-darkblue);
-    background-color: var(--basic-white);
-    border: none;
-}
-
 .services-pager__card-title {
     font-size: 30px;
     line-height: 30px;
     font-weight: normal;
     color: var(--text-darkblue);
+    text-transform: uppercase;
+
+    margin-top:0;
+    margin-bottom: 30;
 }
 
 .services-pager__card-description {
     font-family: "PT Sans", "Arial", sans-serif;
-}
 
+    margin: 0;
+}
 
 /* Секция о компании */
 
@@ -688,26 +787,31 @@ img {
     line-height: 30px;
     text-transform: uppercase;
     font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 24px;
 }
 
 .company-info__text,
-.company-info__partners {
-    font-family: "PT Sans", "Arial", sans-serif;
+.company-info__partners-lead {
+  font-family: "PT Sans", "Arial", sans-serif;
+  margin: 0;
 }
 
 .company-info__partner-list {
-    margin: 0;
     padding: 0;
     list-style: none;
+    margin-bottom: 12px;
 }
 
 .company-info__partner-item {
     font-size: 18px;
     line-height: 24px;
+    margin-bottom: 12px;
 }
 
 .company-info__partner-item span {
     color: var(--basic-red);
+    margin-right: 12px;
 }
 
 .company-info__link {
@@ -717,6 +821,10 @@ img {
     text-decoration: none;
     color: var(--basic-white);
     background-color: var(--basic-red);
+
+    text-align: center;
+    min-width: 220px;
+    padding: 10px 40px;
 }
 
 /* Секция контакты  */
@@ -735,6 +843,8 @@ img {
     line-height: 30px;
     font-weight: normal;
     text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 24px;
 }
 
 .contacts__text {
@@ -746,9 +856,13 @@ img {
     background-color: var(--basic-red);
     border: none;
     text-transform: uppercase;
+    text-align: center;
     font-size: 14px;
     line-height: 18px;
     outline: none;
+
+    min-width: 300px;
+    padding: 10px 60px;
 }
 
 .contacts__button:hover {
@@ -801,6 +915,27 @@ img {
     list-style: none;
 }
 
+.footer__nav-wrapper {
+  width: 550px;
+  justify-self: end;
+  margin-top: 36px;
+}
+
+.footer__info-wrapper {
+  width: 550px;
+  justify-self: end;
+}
+
+.footer__nav-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__info-list {
+  display: flex;
+  justify-content: space-around;
+}
+
 .footer-nav__link,
 .footer__info-link,
 .footer__info-address,
@@ -844,10 +979,18 @@ img {
 }
 
 /* Ссылки на социальные сети */
+.footer__socials {
+  justify-self: center;
+}
+
 .social__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+  width: 134px;
 }
 
 .social__link {
@@ -857,7 +1000,6 @@ img {
 .social__link:hover {
     background-color: var(--basic-red);
 }
-
 
 /* Страница catalog.html */
 
