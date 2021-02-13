@@ -176,21 +176,34 @@ img {
 
 .main-header__panel-container {
    display: grid;
-   grid-template-columns: repeat(5, 1fr);
+   grid-template-columns: 220px 220px 140px 140px 150px;
+   gap: 17px;
 }
 
 .logo {
     background-color: var(--basic-red);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
 }
 
 .main-header__logo:active {
    background-color: var(--button-click-red);
 }
 
+.main-header__search {
+  align-self: center;
+}
+
+.main-header__bookmarks,
+.main-header__cart {
+  justify-self: end;
+  align-self: center;
+}
+
 .main-header__search-input {
     background-color: inherit;
     border: none;
+    padding: 0;
 }
 
 .main-header__search-input:focus {
@@ -217,10 +230,6 @@ img {
   justify-self: end;
 }
 
-.main-header__place-order-button {
-  padding: 9px 17px;
-}
-
 .main-header__bookmarks-button,
 .main-header__cart-button,
 .main-header__place-order-button {
@@ -236,6 +245,8 @@ img {
 
 .main-header__place-order-button {
     background-color: var(--basic-green);
+    min-width: 150px;
+    padding: 9px 16px 9px 19px;
 }
 
 .main-header__bookmarks-button:active,
@@ -258,7 +269,7 @@ img {
   justify-self: start;
 
   width: 200px;
-  margin: 38px 0 44px 26px;
+  margin: 44px 0 44px 26px;
 }
 
 .main-header-content__user-login {
@@ -343,7 +354,8 @@ img {
 
 .main-navigation__wrapper {
   background-color: var(--text-darkblue);
-  overflow : auto;
+  box-sizing: border-box;
+  margin-bottom: 60px;
 }
 
 .main-navigation__list {
@@ -352,7 +364,7 @@ img {
 
     display: flex;
     justify-content: space-around;
-    margin: 16px auto 20px auto;
+    margin: 16px 17px 20px 13px;
 }
 
 .main-navigation__item-content {
@@ -372,7 +384,7 @@ img {
 /* Секция каталога с карточками */
 
 .main-page__catalog {
-  margin-bottom: 70px;
+  margin-bottom: 52px;
 }
 
 .сatalog-offers__list {
@@ -383,6 +395,10 @@ img {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, min-content);
     gap: 20px;
+}
+
+.catalog-offers__item {
+  position: relative;
 }
 
 .catalog-offers__item--additional-offer {
@@ -396,7 +412,15 @@ img {
 
 .offer-card {
   min-height: 123px;
+  overflow: hidden;
   position: relative;
+}
+
+.offer-card__img {
+  position: absolute;
+  top: 50%;
+  left: 78%;
+  transform: translate(-55%, -50%);
 }
 
 .offer-card__title {
@@ -414,8 +438,8 @@ img {
     line-height: 18px;
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.3);
-
-    margin: 14px 0px 21px 22px;
+    position: absolute;
+    left: 22px;
     padding: 10px 24px;
 }
 
@@ -451,14 +475,16 @@ img {
     margin: 0;
     padding: 0;
     list-style: none;
+    position: relative;
 }
 
 .detailed-offers-card__item {
     background-color: var(--background-offers-card);
+    display: none;
 }
 
-.catalog-offers__card-container {
-  position: relative;
+.detailed-offers-cards_current {
+  display: block;
 }
 
 .detailed-offers-card__title {
@@ -491,6 +517,13 @@ img {
     text-decoration: none;
     text-transform: uppercase;
     background-color: var(--basic-red);
+
+    position: absolute;
+    text-align: center;
+    min-width: 144px;
+    bottom: 12%;
+    left: 24px;
+    padding: 10px 24px;
 }
 
 .detailed-offers-card__link:hover {
@@ -499,6 +532,24 @@ img {
 
 .detailed-offers-card__link:active {
     background-color: var(--button-click);
+}
+
+.detailed-offers-card__slide-switch {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+}
+
+.detailed-offers-card__slider-button--prev {
+  position: absolute;
+  bottom: 50%;
+  left: 24px;
+}
+
+.detailed-offers-card__slider--button--next {
+  position: absolute;
+  bottom: 50%;
+  right: 20px;
 }
 
 /* Стили заголовков секций */
@@ -516,6 +567,7 @@ img {
     line-height: 30px;
     font-weight: normal;
     color: var(--text-darkblue);
+    text-transform: uppercase;
 
     align-self: center;
     margin: 29px 0px 30px 28px;
@@ -601,6 +653,8 @@ img {
     text-decoration: none;
     color: var(--basic-white);
     background-color: var(--basic-red);
+
+    margin-bottom: 20px;
 }
 
 .good-card__purchase-button {
@@ -656,7 +710,7 @@ img {
 /* Секция популярные производители */
 
 .main-page__companies {
-  margin-bottom: 70px;
+  margin-bottom: 66px;
 }
 
 .popular-companies {
@@ -706,7 +760,7 @@ img {
 
 .services__description {
   overflow: auto;
-  margin: 64px 0px 64px;
+  margin: 64px 0px 21px;
 }
 
 .services__title {
@@ -727,13 +781,18 @@ img {
 
 .services-pager {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 240px 2fr;
+  gap: 80px;
+
+  /* Отступы будут другими, еще нет декоративной тени у списка */
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+
 
 .services-pager__items {
    display: grid;
    grid-template-rows: repeat(3, 1fr);
-   margin-bottom: 92px;
 }
 
 .services-pager__item {
@@ -755,10 +814,6 @@ img {
     border: none;
 }
 
-.services-pager__card {
-  margin-left: 80px;
-}
-
 .services-pager__item:hover {
     background-color: var(--footer-blue);
 }
@@ -776,8 +831,24 @@ img {
 
 .services-pager__card-description {
     font-family: "PT Sans", "Arial", sans-serif;
-
     margin: 0;
+
+    /* Не знаю, как разрешить проблему с переносом текста именно как на макете  */
+    width: 274px;
+}
+
+.services-pager__card--first-service {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-pager__card--first-service::before {
+  content: url(/img/delivery-layer.png);
+  position: absolute;
+  right: 0;
+
+  /* Иначе фото вылезает за секцию,  overflow: hidden почему-то не помог решить эту проблему */
+  height: 236px;
 }
 
 /* Секция о компании */
@@ -791,8 +862,13 @@ img {
     margin-bottom: 24px;
 }
 
-.company-info__text,
-.company-info__partners-lead {
+.company-info__promo-text {
+  font-family: "PT Sans", "Arial", sans-serif;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.company-info__partners-text {
   font-family: "PT Sans", "Arial", sans-serif;
   margin: 0;
 }
@@ -800,7 +876,7 @@ img {
 .company-info__partner-list {
     padding: 0;
     list-style: none;
-    margin-bottom: 12px;
+    margin-bottom: 17px;
 }
 
 .company-info__partner-item {
@@ -835,7 +911,8 @@ img {
 
 .about-us {
   display: grid;
-  grid-template-columns: 1fr min-content;
+  grid-template-columns: 460px min-content;
+  gap: 180px;
 }
 
 .contacts__title {
@@ -873,6 +950,10 @@ img {
     background-color: var(--button-click-red);
 }
 
+.contacts__map {
+  margin-bottom: 25px;
+}
+
 /* Футер */
 
 .footer {
@@ -882,18 +963,18 @@ img {
 .footer__navigation {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 
 .footer__info {
   display: grid;
   grid-template-columns: min-content 1fr;
-  margin-bottom: 40px;
+  margin-bottom: 47px;
+  gap: 46px;
 }
 
 .footer__info-contacts {
   min-width: 325px;
-  padding-left: 10px;
 }
 
 .footer__references {
@@ -901,11 +982,16 @@ img {
     width: 100%;
 }
 
+.footer__references-copyright {
+  margin: 0;
+}
+
 .footer__references-container {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr;
   gap: 20px;
   align-items: center;
+  min-height: 107px;
 }
 
 .footer__nav-list,
@@ -928,12 +1014,29 @@ img {
 
 .footer__nav-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .footer__info-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-left: 26px;
+}
+
+.footer__feedback {
+  margin-left: 34px;
+}
+
+.footer__authors {
+  text-align: end;
+}
+
+.footer__authors-text {
+  margin-right: 17px;
+}
+
+.footer__authors-link {
+  margin-right: 12px;
 }
 
 .footer-nav__link,
@@ -990,7 +1093,7 @@ img {
 
   display: flex;
   justify-content: space-between;
-  width: 134px;
+  width: 120px;
 }
 
 .social__link {
