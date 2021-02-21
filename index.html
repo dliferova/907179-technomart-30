@@ -18,49 +18,48 @@
     <!-- Секция поиска, корзины и оформления заказа-->
     <div class="main-header__panel">
       <div class="main-header__panel-container container">
-        <a class="logo" aria-label="Перейти на главную" href="#">
-          <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотоп интернет-магазина Техномарт">
-        </a>
-        <form class="main-header__search" action="#" method="POST">
-          <svg class="main-header__search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.3">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
-                fill="white" />
-            </g>
-          </svg>
-          <input class="main-header__search-input" type="search" placeholder="Поиск:">
-        </form>
-        <div class="main-header__bookmarks">
-          <svg class="main-header__bookmarks-icon" width="14" height="16" viewBox="0 0 14 16" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.3">
-              <path
-                d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z"
-                fill="white" />
-            </g>
-          </svg>
-          <button class="main-header__bookmarks-button" type="button">Закладки:
-            <span class="main-header__bookmarks-count">0</span>
-          </button>
+        <div class="main-header__logo">
+          <a class="logo" aria-label="Перейти на главную" href="#">
+            <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотоп интернет-магазина Техномарт">
+          </a>
         </div>
+        <form class="main-header__search" action="#" method="POST">
+          <input class="main-header__search-input" type="search" placeholder="Поиск:">
+          <svg class="main-header__search-icon" width="17" height="17" viewBox="0 0 17 17"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
+          </svg>
+        </form>
+
+        <div class="main-header__bookmarks">
+          <a class="main-header__bookmarks-link" href="#">
+            <svg class="main-header__bookmarks-icon" width="14" height="16" viewBox="0 0 14 16"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z"/>
+            </svg>
+            Закладки:
+            <span class="main-header__bookmarks-count">0</span>
+          </a>
+        </div>
+
         <div class="main-header__cart">
-          <svg class="main-header__cart-icon" width="15" height="15" viewBox="0 0 15 15" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.3">
+          <a class="main-header__cart-link" href="#">
+            <svg class="main-header__cart-icon" width="15" height="15" viewBox="0 0 15 15"
+                 xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
-                fill="white" />
+              />
               <path
                 d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
-                fill="white" />
-              <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white" />
-            </g>
-          </svg>
-          <button class="main-header__cart-button" type="button">Корзина:
+              />
+              <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z"/>
+            </svg>
+            Корзина:
             <span class="cart-count">0</span>
-          </button>
+          </a>
+
         </div>
         <div class="main-header__place-order">
           <button class="main-header__place-order-button" type="button">Оформить заказ</button>
@@ -72,7 +71,8 @@
     <!-- Секция контакты, вход и регистрация -->
     <div class="main-header__content main-header-content container">
       <div class="main-header-content__lead">
-        <p class="main-header__main-content-text"> Интернет-магазин строительных материалов и инструментов для ремонта
+        <p class="main-header__main-content-text"> Интернет-магазин строительных материалов <br> и инструментов для
+          ремонта
         </p>
       </div>
       <div class="main-header-content__contact-details">
@@ -83,7 +83,7 @@
       </div>
       <div class="main-header-content__user-login">
         <button type="submit" class="main-header-content__user-login-button">
-          <img src="/img/icon-login.svg">
+          <img class="main-header-content__user-login-img" src="/img/icon-login.svg">
           Войти
         </button>
         <button type="submit" class="main-header-content__user-register-button">Регистрация</button>
@@ -126,8 +126,8 @@
       <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
 
       <section class="catalog-offers main-page__catalog">
-        <h2 class="сatalog-offers__title visually-hidden">Каталог товаров</h2>
-        <ul class="сatalog-offers__list">
+        <h2 class="catalog-offers__title visually-hidden">Каталог товаров</h2>
+        <ul class="catalog-offers__list">
           <li class="catalog-offers__item">
             <div class="catalog-offers__card offer-card offer-card--theme_orange">
               <h3 class="offer-card__title">Материалы</h3>
@@ -141,6 +141,7 @@
                   d="M22 0C1.688 0 0 19.875 0 19.875V22.937C8.438 29.188 22 29 22 29C22 29 35.562 29.188 44 22.938V19.876C44 19.875 42.312 0 22 0ZM22 25C10.25 25 7.688 22.625 7.688 22.625C13.938 19.75 22 19.875 22 19.875C22 19.875 30.062 19.75 36.312 22.625C36.312 22.625 33.75 25 22 25ZM4.312 15.563C4.312 15.563 12.438 12.625 22 12.625C31.562 12.625 39.688 15.562 39.688 15.562C35.125 2.624 22 3.062 22 3.062C22 3.062 8.875 2.625 4.312 15.563Z"
                   fill="white" />
               </svg>
+              <span class="new-category offer-card__new-border">New</span>
             </div>
           </li>
           <li class="catalog-offers__item">
@@ -212,17 +213,19 @@
           <li class="catalog-offers__item catalog-offers__item--main">
             <!--Cлайдер с карточками-->
             <ul class="detailed-offers-card__list">
-              <li class="catalog-offers__item detailed-offers-cards_current">
+              <li class="detailed-offers-cards_current">
                 <div class="catalog-offers__card-container">
                   <h3 class="detailed-offers-card__title">Перфораторы</h3>
                   <span class="detailed-offers-card__lead">Настоящие мужcкие игрушки</span>
                   <img src="img/perforators-promo.jpg" width="620" height="266" alt="Мужчина с перфораторем">
                 </div>
               </li>
-              <li class="detailed-offers-card__item">
-                <h3 class="detailed-offers-card__title">Дрели</h3>
-                <span class="detailed-offers-card__lead">Соседям на радость</span>
-                <img src="img/drills-promo.jpg" width="620" height="266" alt="Мужчина с дрелью">
+              <li class="detailed-catalog-offers__item">
+                <div class="catalog-offers__card-container">
+                  <h3 class="detailed-offers-card__title">Дрели</h3>
+                  <span class="detailed-offers-card__lead">Соседям на радость!</span>
+                  <img src="img/drills-promo.jpg" width="620" height="266" alt="Мужчина с дрелью">
+                </div>
               </li>
             </ul>
             <div class="catalog-offers__slider-controls">
@@ -233,9 +236,9 @@
                 <span class="visually-hidden">Следующее предложение</span>
               </button>
               <a class="detailed-offers-card__link" href="catalog.html">Открыть каталог</a>
-              <div class="detailed-offers-card__slide-switch">
-                <input type="radio" id="slide-first" name="active-slide">
-                <input type="radio" id="slide-second" name="active-slide">
+              <div class="detailed-offers-card__slider-controls slider-controls">
+                <button class="slider-controls__btn slider-controls__btn--current" type="button" aria-label="Первый слайд"></button>
+                <button class="slider-controls__btn" type="button" aria-label="Второй слайд"></button>
               </div>
             </div>
           </li>
@@ -254,75 +257,97 @@
               <div class="popular-goods__card good-card">
                 <div class="good-card__main-info">
                   <p class="good-card__image">
-                    <img src="img/snippet-32961.png" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+                    <img src="img/model_1.png" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
                   </p>
                   <h4 class="good-card__title">Перфоратор BOSCH BFG 9000</h4>
-                  <s class="good-card__old-price">32500₽</s>
-                  <a href="#" class="good-card__new-price">25500₽</a>
+                  <div class="good-card__old-price">
+                    <s class="good-card__old-price-value">32500 P.</s>
+                  </div>
+                  <div class="good-card__price">
+                    <a href="#" class="good-card__price-value">25500 P.</a>
+                  </div>
                 </div>
                 <div class="good-card__purchase-button">
                   <button class="good__add-to-cart" type="button">
-                    <img src="/img/icon-cart.svg">
                     Купить
                   </button>
                   <button class="good__add-to-save" type="button">В закладки</button>
                 </div>
               </div>
             </li>
+
             <li class="popular-goods__item">
               <div class="popular__card good-card">
+
                 <div class="good-card__main-info">
                   <p class="good-card__image">
-                    <img src="img/snippet-18927.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                    <img src="img/model_3.png" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
                   </p>
                   <h4 class="good-card__title">Перфоратор BOSCH BFG 3000</h4>
-                  <s class="good-card__old-price">22500₽</s>
-                  <a href="#" class="good-card__new-price">15500₽</a>
+
+                  <div class="good-card__old-price">
+                    <s class="good-card__old-price-value">22500 P.</s>
+                  </div>
+
+                  <div class="good-card__price">
+                    <a href="#" class="good-card__price-value">15500 P.</a>
+                  </div>
                 </div>
+
                 <div class="good-card__purchase-button">
                   <button type="button" class="good__add-to-cart">
-                    <img src="/img/icon-cart.svg">
                     Купить
                   </button>
                   <button type="button" class="good__add-to-save">В закладки</button>
                 </div>
+                <span class="new-category new-category__good">New</span>
               </div>
             </li>
+
             <li class=" popular-goods__item">
               <div class="popular-goods__card good-card">
                 <div class="good-card__main-info">
                   <p class="good-card__image">
-                    <img src="img/snipset248.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                    <img src="img/model_2.png" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
                   </p>
                   <h4 class="good-card__title">Перфоратор BOSCH BFG 6000</h4>
-                  <s class="good-card__old-price">30500₽</s>
-                  <a href="#" class="good-card__new-price">25500₽</a>
+                  <div class="good-card__old-price">
+                    <s class="good-card__old-price-value">30500 P.</s>
+                  </div>
+                  <div class="good-card__price">
+                    <a href="#" class="good-card__price-value">25500 P.</a>
+                  </div>
                   <div class="good-card__purchase-button">
                     <button type="button" class="good__add-to-cart">
-                      <img src="/img/icon-cart.svg">
                       Купить
                     </button>
                     <button type="button" class="good__add-to-save">В закладки</button>
                   </div>
                 </div>
+              </div>
             </li>
+
             <li class="popular-goods__item">
               <div class="popular-goods__card good-card">
                 <div class="good-card__main-info">
                   <p class="good-card__image">
-                    <img src="img/snippet-18927.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                    <img src="img/model_3.png" width="184" height="164" alt="Перфоратор BOSCH BFG 2000">
                   </p>
                   <h4 class="good-card__title">Перфоратор BOSCH BFG 2000</h4>
-                  <s class="good-card__old-price">22500₽</s>
-                  <a href="#" class="good-card__new-price">12500₽</a>
+                  <div class="good-card__old-price">
+                    <s class="good-card__old-price-value">22500 P.</s>
+                  </div>
+                  <div class="good-card__price">
+                    <a href="#" class="good-card__price-value">12500 P.</a>
+                  </div>
                 </div>
                 <div class="good-card__purchase-button">
                   <button type="button" class="good__add-to-cart">
-                    <img src="/img/icon-cart.svg">
                     Купить
                   </button>
                   <button type="button" class="good__add-to-save">В закладки</button>
                 </div>
+                <span class="new-category new-category__good">New</span>
               </div>
             </li>
           </ul>
@@ -352,7 +377,7 @@
           </li>
           <li class="companies__list-item company-card">
             <a class="company-card__link" href="#">
-              <img src="img/interskol.png" alt="Логотип фирмы Интерскол" width="200" height="75">
+              <img src="img/interskol.png" alt="Логотип фирмы Интерскол" width="200" height="76">
             </a>
           </li>
           <li class="companies__list-item company-card">
@@ -372,12 +397,11 @@
           </li>
           <li class="companies__list-item company-card">
             <a class="company-card__link" href="#">
-              <img src="img/metabo.png" alt="Логотип фирмы Metabo" width="206" height="73">
+              <img src="img/metabo.png" alt="Логотип фирмы Metabo" width="204" height="69">
             </a>
           </li>
         </ul>
       </section>
-    </div>
     </div>
 
     <section class="services main-page__services">
@@ -393,33 +417,33 @@
             <button type="button" class="services-pager__item">Гарантия</button>
             <button type="button" class="services-pager__item">Кредит</button>
           </div>
+
           <div class="services-pager__card services-pager__card--first-service">
             <h3 class="services-pager__card-title">Доставка</h3>
-            <p class="services-pager__card-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
+            <p class="services-pager__card-description services-pager__card-description__delivery">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
               совершенно бесплатно! Ведь мы неплохо зарабатываем, поднимая его на ваш этаж!</p>
           </div>
-          <!-- <div class="services-pager__card">
-            <h3 class="services-pager__card-title">Гарантия</h3>
-            <p class="services-pager__card-description">Если купленный у нас товар поломается или заискрит, a так же в
-              случае
-              пожара, спровоцированного его
-              возгоранием, вы
-              всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом восстановите
-              как-нибудь сами.</p>
-          </div>
-          <div class="services-pager__card">
-            <h3 class="services-pager__card-title">Кредит</h3>
-            <p class="services-pager__card-description">Залезть в долговую яму стало проще! Кредитные консультанты
-              придут
-              вам
-              на помощь.</p>
-          </div> -->
+
+<!--          <div class="services-pager__card services-pager__card&#45;&#45;second-service">-->
+<!--            <h3 class="services-pager__card-title">Гарантия</h3>-->
+<!--            <p class="services-pager__card-description services-pager__card-description__guarantee">Если купленный у нас товар поломается или заискрит, a так же в-->
+<!--              случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии.-->
+<!--              Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>-->
+<!--          </div>-->
+
+<!--          <div class="services-pager__card services-pager__card&#45;&#45;third-service">-->
+<!--            <h3 class="services-pager__card-title">Кредит</h3>-->
+<!--            <p class="services-pager__card-description services-pager__card-description__credit">Залезть в долговую яму стало проще!-->
+<!--              Кредитные консультанты придут вам на помощь.</p>-->
+<!--            <button class="services-pager__send-application">Отправить заявку</button>-->
+<!--          </div>-->
         </div>
       </div>
     </section>
 
     <div class="container">
       <section class="about-us main-page__about-us">
+
         <div class="company-info about-us__company-info">
           <h2 class="company-info__title">Компания &laquo;Техномарт&raquo;</h2>
           <p class="company-info__promo-text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
@@ -441,25 +465,58 @@
           <a class="company-info__link" href="#">Подробнее о компании</a>
         </div>
 
-        <div class="contacts about-us__contacts">
+        <section class="contacts about-us__contacts">
           <h2 class="contacts__title">Контакты</h2>
           <p class="contacts__text"> Вы можете забрать товар сами, заехав в наш офис:</p>
           <!--Место для карты-->
-          <section class="contacts__map">
+          <div class="contacts__map">
             <h2 class="visually-hidden">Карта нашего магазина</h2>
             <p class="contacts__map-photo">
-              <img src="img/map.png" width="300" height="158"
-                alt="Карта магазина техномарт по адресу Большая Конюшенная, 19">
+              <img src="img/map.png" width="300" height="158" alt="Магазин техномарт по адресу Большая Конюшенная, 19">
             </p>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6104410682763!2d30.32032062345396!3d59.93860607951444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2scz!4v1611678640774!5m2!1sru!2scz"
-              width="300" height="158" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-              tabindex="0"></iframe>
-          </section>
+          </div>
           <button class="contacts__button" type="button">Заблудились? Напишите нам</button>
-        </div>
+        </section>
+
+        <section class="modal contacts__modal">
+          <h2 class="visually-hidden">Напишите нам</h2>
+          <form class="contacts__form">
+            <div class="contacts__form-content">
+              <p class="contacts__item contacts__item_name">
+                <label class="contacts__item-label" for="client-name">Ваше имя:</label>
+                <input class="contacts__item-input" id="client-name" type="text" name="name" placeholder="Имя Фамилия">
+              </p>
+              <p class="contacts__item contacts__item_email">
+                <label class="contacts__item-label" for="client-mail">Ваш e-mail:</label>
+                <input class="contacts__item-input" id="client-mail" type="email" name="email"
+                       placeholder="email@example.com">
+              </p>
+              <p class="contacts__item contacts__item_appeal">
+                <label class="contacts__item-label" for="client-appeal">Текст письма:</label>
+                <textarea class="contacts__item-form-message" id="client-appeal" type="text" name="text"
+                          placeholder="В свободной форме"></textarea>
+              </p>
+            </div>
+            <div class="contacts__modal-button-wrapper">
+              <button class="contacts__modal-button" type="submit">Отправить</button>
+            </div>
+          </form>
+          <button class="contacts__modal-close" type="button" aria-label="Закрыть"></button>
+        </section>
+
       </section>
     </div>
+
+
+
+<!--    <section class="modal modal__map">-->
+<!--      <h2 class="visually-hidden">Как до нас добраться</h2>-->
+<!--      <iframe width="943" height="449" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.541597973545!2d30.315279721346!3d59.93974834161408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2scz!4v1613650834653!5m2!1sru!2scz" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Магазин техномарт по адресу Большая Конюшенная, 19">-->
+<!--      </iframe>-->
+<!--      <button class="contacts__modal-close modal__map-close" type="button" aria-label="Закрыть"></button>-->
+<!--    </section>-->
+
+
   </main>
 
 
