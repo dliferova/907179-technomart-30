@@ -235,9 +235,11 @@ img {
 }
 
 .main-header__search-input {
+  line-height: 24px;
+  font-size: 18px;
   width: 100%;
   background-color: var(--footer-blue);
-  padding: 10px 0 10px 40px;
+  padding: 9px 0 9px 40px;
   border: none;
 }
 
@@ -1025,6 +1027,10 @@ img {
     align-items: center;
 }
 
+.company-card img {
+  object-fit: contain;
+}
+
 .company-card:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -1240,6 +1246,10 @@ img {
   padding: 70px 0;
 }
 
+.main-page__about-us {
+  position: relative;
+}
+
 .contacts__title {
     font-size: 30px;
     line-height: 30px;
@@ -1284,29 +1294,40 @@ img {
 /* Contacts__modal */
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-
   font-size: 18px;
   line-height: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
   display: none;
 }
 
-.contacts__modal,
-.modal-good-in-cart {
+.contacts__modal {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 620px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border-top: 7px solid  var(--basic-red);
   background-color: var(--basic-white);
 }
 
+.modal__map {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 943px;
+  height: 449px;
+  border-top: 4px solid  var(--basic-red);
+}
+
 .modal-good-in-cart {
-  top: 30%;
-  bottom: auto;
+  position: fixed;
+  width: 620px;
+  border-top: 7px solid  var(--basic-red);
+  background-color: var(--basic-white);
+  top: 34%;
+  left: 26%;
+  display: none;
 }
 
 .modal-good-in-cart--visiable {
@@ -1318,7 +1339,7 @@ img {
   grid-template-columns: repeat(2, 220px);
   column-gap: 20px;
   row-gap: 14px;
-  margin: 46px 80px 29px;
+  padding: 41px 80px 29px;
 }
 
 .contacts__item {
@@ -1386,7 +1407,7 @@ img {
 
 .contacts__modal-close {
   position: absolute;
-  top: 15px;
+  top: 8px;
   right: 11px;
   width: 21px;
   height: 21px;
@@ -1420,7 +1441,6 @@ img {
 .modal__map {
   width: 943px;
   height: 449px;
-  position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border-top: 4px solid  var(--basic-red);
 }
