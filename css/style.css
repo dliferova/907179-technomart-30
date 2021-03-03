@@ -265,7 +265,7 @@ img {
 }
 
 .main-header__cart-link {
-  padding: 10px 17px;
+  padding: 10px 24px;
 }
 
 .main-header__bookmarks-link:hover .main-header__bookmarks-icon,
@@ -352,6 +352,13 @@ img {
   justify-content: space-between;
 }
 
+.registered-user {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: end;
+}
+
 .main-header__main-content-text {
   font-size: 16px;
   line-height: 23px;
@@ -408,7 +415,16 @@ img {
 
 /* Кнопки войти и регистрации */
 
-.main-header-content__user-login-button,
+.main-header-content__user-login-button {
+  font-size: 21px;
+  line-height: 21px;
+  border:none;
+  text-align: center;
+  background-color: var(--basic-white);
+  margin-right: 12px;
+  padding: 9px 26px 5px 19px;
+}
+
 .main-header-content__user-register-button {
     font-size: 21px;
     line-height: 21px;
@@ -416,19 +432,9 @@ img {
     text-align: center;
 }
 
-.main-header-content__user-login-button {
-  padding: 12px 20px;
-  background-color: var(--basic-white);
-  margin-right: 12px;
-}
-
 .main-header-content__user-register-button {
   padding: 12px 24px;
   background-color: var(--basic-white);
-}
-
-.main-header-content__user-login-img {
-  margin-right: 7px;
 }
 
 .main-header-content__user-login-button:hover,
@@ -457,10 +463,6 @@ img {
 
 .registered-user__profile-img {
   margin: 0 21px 0 15px;
-}
-
-.main-header-content__user-login-img {
-  margin: 0 17px 0 20px;
 }
 
 .registered-user__profile-img,
@@ -519,7 +521,7 @@ img {
 /* Секция каталога с карточками */
 
 .main-page__catalog {
-  margin-top: 60px;
+  margin-top: 57px;
   margin-bottom: 52px;
 }
 
@@ -664,7 +666,7 @@ img {
     color: var(--basic-white);
 
     position: absolute;
-    top: 64px;
+    top: 66px;
     left: 24px;
 }
 
@@ -721,14 +723,14 @@ img {
 .detailed-offers-card__slider-button--prev,
 .detailed-offers-card__slider--button--next {
   position: absolute;
-  bottom: 50%;
+  bottom: 47%;
   background-color: transparent;
   border: none;
 }
 
 .detailed-offers-card__slider-button--prev {
   transform: translateY(50%);
-  left: 24px;
+  left: 18px;
 }
 
 .detailed-offers-card__slider--button--next {
@@ -761,7 +763,8 @@ img {
     text-transform: uppercase;
 
     align-self: center;
-    margin: 29px 0 30px 28px;
+    margin: 0;
+    padding: 29px 0 30px 28px;
 
 }
 
@@ -796,7 +799,7 @@ img {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 16px;
 }
 
 /* Карточка одного товара */
@@ -1018,6 +1021,7 @@ img {
 .main-page__services {
   width: 100%;
   padding-top: 64px;
+  padding-bottom: 31px;
 }
 
 .services {
@@ -1648,13 +1652,6 @@ img {
 /* Main-header */
 
 /*Общий flex для зарег. пользователя */
-.registered-user {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  justify-self: end;
-}
-
 .registered-user__wrapper {
   background-color: var(--basic-white);
   display: flex;
