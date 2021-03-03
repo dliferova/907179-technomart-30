@@ -265,7 +265,8 @@ img {
 }
 
 .main-header__cart-link {
-  padding: 10px 24px;
+  display: block;
+  padding: 9px 24px;
 }
 
 .main-header__bookmarks-link:hover .main-header__bookmarks-icon,
@@ -299,7 +300,6 @@ img {
 }
 
 .main-header__cart-link_filled {
-  margin-left: 12px;
   box-sizing: content-box;
   background-color: var(--basic-red);
 }
@@ -309,6 +309,19 @@ img {
   fill: var(--basic-white);
   opacity: 0.3;
   margin-right: 5px;
+}
+
+.main-header__cart-link_full {
+  padding: 9px 20px;
+}
+
+.main-header__cart-link_full:hover {
+  background-color: var(--basic-red);
+}
+
+.main-header__cart-link_full:active {
+  background-color: var(--basic-red);
+  opacity: 0.5;
 }
 
 /* Зеленая кнопка Оформить заказ*/
@@ -455,23 +468,29 @@ img {
   padding: 12px 0;
 }
 
+.main-header-content__user-logout-img {
+  margin-left: 19px;
+  margin-right: 18px;
+}
+
 .registered-user__button:active,
 .registered-user__button:focus {
   color: var(--basic-greylight);
 }
-
 
 .registered-user__profile-img {
   margin: 0 21px 0 15px;
 }
 
 .registered-user__profile-img,
-.main-header-content__user-login-img {
+.main-header-content__user-login-img,
+.main-header-content__user-logout-img {
   fill: var(--basic-greylight);
 }
 
 .registered-user__profile-img:hover,
-.main-header-content__user-login-img:hover {
+.main-header-content__user-login-img:hover,
+.main-header-content__user-logout-img:hover {
   fill: var(--img-hover);
 }
 
@@ -1655,7 +1674,7 @@ img {
 .registered-user__wrapper {
   background-color: var(--basic-white);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 7px;
 }
