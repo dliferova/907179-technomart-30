@@ -660,12 +660,12 @@ img {
     position: relative;
 }
 
-.detailed-offers-cards_current {
-  display: block;
-}
-
 .detailed-catalog-offers__item {
   display: none;
+}
+
+.detailed-catalog-offers__item--current {
+  display: block;
 }
 
 .detailed-offers-card__title {
@@ -1118,6 +1118,14 @@ img {
     background-color: var(--footer-blue);
 }
 
+.services-pager__card {
+  display: none;
+}
+
+.services-pager__card--active {
+  display: block;
+}
+
 .services-pager__card-title {
     font-size: 30px;
     line-height: 30px;
@@ -1327,10 +1335,13 @@ img {
   background-color: var(--basic-white);
   top: 34%;
   left: 26%;
-  display: none;
 }
 
-.modal-good-in-cart--visiable {
+.modal-good-in-cart--visible {
+  display: block;
+}
+
+.contacts__modal--visible {
   display: block;
 }
 
@@ -1443,6 +1454,7 @@ img {
   height: 449px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border-top: 4px solid  var(--basic-red);
+  display: none;
 }
 
 .modal__map-close {
@@ -1521,6 +1533,10 @@ img {
   background-color: var(--basic-white);
   color: var(--basic-black);
   margin-left: 7px;
+}
+
+.modal__map--visible {
+  display: block;
 }
 
 /* Футер */
