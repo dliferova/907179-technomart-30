@@ -181,8 +181,6 @@ img {
   display: grid;
 }
 
-/* Верхняя панель header  */
-
 .main-header__panel {
   background-color: var(--footer-blue);
 }
@@ -328,8 +326,6 @@ img {
   opacity: 0.5;
 }
 
-/* Зеленая кнопка Оформить заказ*/
-
 .main-header__place-order {
   justify-self: end;
 }
@@ -363,7 +359,6 @@ img {
 .main-header-content__user-login {
   justify-self: end;
   align-self: start;
-  /*padding-top: 46px;*/
 
   display: flex;
   justify-content: space-between;
@@ -387,8 +382,6 @@ img {
   padding-left: 30px;
   display: block;
 }
-
-/** Секция с телефоном и адресом */
 
 .main-header-content__contact-details {
   display: flex;
@@ -508,7 +501,6 @@ img {
 /* Navigation */
 
 .main-navigation__wrapper {
-  /*временно*/
   margin-bottom: 62px;
 }
 
@@ -1706,8 +1698,6 @@ img {
 
 /* Страница catalog.html */
 
-/* Main-header */
-
 /*Общий flex для зарег. пользователя */
 .registered-user__wrapper {
   background-color: var(--basic-white);
@@ -2021,8 +2011,6 @@ img {
   background-color: var(--checkbox-fill-disable);
 }
 
-
-/*Обнуление для фиелдсетов*/
 .filter-section__price,
 .filter-section__companies,
 .filter-section__battery {
