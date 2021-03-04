@@ -8,7 +8,7 @@ const deliveryBlock = document.querySelector(".services-pager__card--first-servi
 const guaranteeBlock = document.querySelector(".services-pager__card--second-service");
 const creditBlock = document.querySelector(".services-pager__card--third-service");
 
-deliveryButton.addEventListener("click", function (evt){
+deliveryButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   console.log("Клик по доставке");
   deliveryButton.classList.add("services-pager__item--active");
@@ -20,7 +20,7 @@ deliveryButton.addEventListener("click", function (evt){
   creditBlock.classList.remove("services-pager__card--active");
 })
 
-guaranteeButton.addEventListener("click", function (evt){
+guaranteeButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   console.log("Клик по гарантии");
   guaranteeButton.classList.add("services-pager__item--active");
@@ -32,7 +32,7 @@ guaranteeButton.addEventListener("click", function (evt){
   creditBlock.classList.remove("services-pager__card--active");
 })
 
-creditButton.addEventListener("click", function (evt){
+creditButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   console.log("Клик по кредиту");
   creditButton.classList.add("services-pager__item--active");
