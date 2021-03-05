@@ -1769,7 +1769,7 @@ img {
 }
 
 .registered-user__offers-link::after {
-  content: url(../img/shape_ring.svg);
+  content: url(../img/shape-ring.svg);
   align-self: center;
   margin: 0 15px;
 }
