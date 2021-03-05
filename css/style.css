@@ -151,7 +151,7 @@ img {
   grid-template-columns: 220px 1fr;
   align-content: start;
   margin-top: 16px;
-  margin-bottom: 60px;
+  margin-bottom: 58px;
 }
 
 .page-catalog__container_full-screen {
@@ -187,7 +187,7 @@ img {
 
 .main-header__panel-container {
   display: grid;
-  grid-template-columns: 220px 271px 150px 150px 150px;
+  grid-template-columns: 220px 271px 164px 136px 150px;
   overflow: visible;
 }
 
@@ -268,7 +268,7 @@ img {
 
 .main-header__cart-link {
   display: block;
-  padding: 9px 24px;
+  padding: 9px 12px;
 }
 
 .main-header__bookmarks-link:hover .main-header__bookmarks-icon,
@@ -301,10 +301,10 @@ img {
   justify-self: end;
 }
 
-.main-header__cart-link_filled {
-  box-sizing: content-box;
-  background-color: var(--basic-red);
-}
+/*.main-header__cart-link_filled {*/
+/*  box-sizing: content-box;*/
+/*  background-color: var(--basic-red);*/
+/*}*/
 
 .main-header__bookmarks-icon,
 .main-header__cart-icon {
@@ -314,7 +314,8 @@ img {
 }
 
 .main-header__cart-link_full {
-  padding: 9px 20px;
+  background-color: var(--basic-red);
+  padding: 9px 0 9px 13px;
 }
 
 .main-header__cart-link_full:hover {
@@ -879,7 +880,7 @@ img {
 
 .good-card__old-price {
   margin-bottom: 9px;
-  min-height: 23px;
+  min-height: 24px;
 }
 
 .good-card__old-price-value {
@@ -949,7 +950,7 @@ img {
   justify-content: center;
   position: absolute;
   left: 50%;
-  top: 34px;
+  top: 37px;
   transform: translateX(-50%);
 }
 
@@ -967,7 +968,7 @@ img {
   display: flex;
   justify-content: center;
 
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   padding-top: 10px;
   padding-bottom: 12px;
   position: relative;
@@ -1185,7 +1186,7 @@ img {
   content: url(../img/guarantee-layer.png);
   position: absolute;
   overflow: hidden;
-  right: 0;
+  right: -7px;
   height: 254px;
 }
 
@@ -1193,7 +1194,7 @@ img {
   content: url(../img/credit-layer.png);
   position: absolute;
   overflow: hidden;
-  right: 0;
+  right: -10px;
   height: 255px;
 }
 
@@ -2057,11 +2058,11 @@ img {
 }
 
 .filter-section__price {
-  margin-top: 12px;
+  margin-top: 15px;
 }
 
 .filter-section__companies {
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .filter-section__battery {
@@ -2106,8 +2107,8 @@ img {
 }
 
 .filter-section__battery-list {
-  margin: 26px 0 38px;
-  padding-left: 40px;
+  margin: 23px 0 38px;
+  padding-left: 39px;
 }
 
 .filter-section__battery-item {
@@ -2138,14 +2139,17 @@ img {
 
 .page-catalog__sort-link {
   font-family: "PT Sans", "Arial", sans-serif;
+  text-decoration: none;
   color: var(--basic-black);
   opacity: 0.3;
-  text-decoration-color: var(--basic-red);
+  border-bottom: 1px dotted var(--basic-red);
+  /*text-decoration-color: var(--basic-red);*/
 }
 
 .page-catalog__sort-link:hover {
   color: var(--basic-black);
   opacity: 1;
+  border-bottom: 1px solid var(--basic-red);
 }
 
 .page-catalog__sort-link--active {
@@ -2192,7 +2196,7 @@ img {
   gap: 16px;
 
   list-style: none;
-  margin: 20px 0 43px 0;
+  margin: 20px 0 47px 0;
   padding: 0;
 }
 
@@ -2229,7 +2233,7 @@ img {
   text-transform: uppercase;
   line-height: 18px;
   background-color: var(--basic-white);
-  padding: 10px 31px;
+  padding: 10px 29px;
 }
 
 .catalog__pagination-link:hover,
@@ -2250,7 +2254,7 @@ img {
 }
 
 .page-catalog__category-description {
-  padding: 65px 0 70px;
+  padding: 65px 0 69px;
 }
 
 .good-description__title {
