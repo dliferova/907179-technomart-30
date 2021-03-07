@@ -541,7 +541,8 @@ img {
 
 .main-navigation__item-content:active {
   background-color: var(--footer-blue);
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--basic-white);
+  opacity: 0.5;
 }
 
 /* Секция каталога с карточками */
@@ -911,27 +912,6 @@ img {
   border-radius: 3px;
 }
 
-
-/*.good-card__price:after {*/
-/*  content: "";*/
-/*  position: absolute;*/
-/*  bottom: 0;*/
-/*  right: 0;*/
-/*  border: 10px solid transparent;*/
-/*  border-right: 10px solid var(--basic-white);*/
-/*  border-bottom: 10px solid var(--basic-white);*/
-/*}*/
-
-/*.good-card__price:before {*/
-/*  content: "";*/
-/*  position: absolute;*/
-/*  border: 10px solid transparent;*/
-/*  top: 0;*/
-/*  right: 0;*/
-/*  border-top: 10px solid var(--basic-white);*/
-/*  border-right: 10px solid var(--basic-white);*/
-/*}*/
-
 .good-card__price-value {
   font-size: 17px;
   line-height: 18px;
@@ -975,7 +955,7 @@ img {
 }
 
 .good__add-to-cart::before {
-  content: url(../img/icon-cart.svg);
+  content: url("../img/icon-cart.svg");
   margin-right: 7px;
 }
 
@@ -1174,7 +1154,7 @@ img {
 }
 
 .services-pager__card--first-service::before {
-  content: url(../img/delivery-layer.png);
+  content: url("../img/delivery-layer.png");
   position: absolute;
   overflow: hidden;
   right: 0;
@@ -1183,7 +1163,7 @@ img {
 }
 
 .services-pager__card--second-service::before {
-  content: url(../img/guarantee-layer.png);
+  content: url("../img/guarantee-layer.png");
   position: absolute;
   overflow: hidden;
   right: -7px;
@@ -1191,7 +1171,7 @@ img {
 }
 
 .services-pager__card--third-service::before {
-  content: url(../img/credit-layer.png);
+  content: url("../img/credit-layer.png");
   position: absolute;
   overflow: hidden;
   right: -10px;
@@ -1524,7 +1504,7 @@ img {
   content: "";
   width: 39px;
   height: 29px;
-  background-image: url("/img/shape.svg");
+  background-image: url("../img/shape.svg");
   left: 15%;
   top: 50%;
   transform: translateY(-50%);
@@ -1769,7 +1749,7 @@ img {
 }
 
 .registered-user__offers-link::after {
-  content: url(../img/shape-ring.svg);
+  content: url("../img/shape-ring.svg");
   align-self: center;
   margin: 0 15px;
 }
@@ -1792,11 +1772,11 @@ img {
 }
 
 .breadcrumbs__item-content {
-  content: url(../img/icon-home.svg);
+  content: url("../img/icon-home.svg");
 }
 
 .breadcrumbs__item::before {
-  content: url(../img/icon-right-small.svg);
+  content: url("../img/icon-right-small.svg");
   position: absolute;
   left: -24px;
 }
@@ -1979,8 +1959,8 @@ img {
   width: 27px;
   height: 23px;
 
-  -webkit-mask-image: url("/img/checkbox-off.svg");
-  mask-image: url("/img/checkbox-off.svg");
+  -webkit-mask-image: url("../img/checkbox-off.svg");
+  mask-image: url("../img/checkbox-off.svg");
   background-color: var(--checkbox-fill-color);
 
   -webkit-mask-repeat: no-repeat;
@@ -1988,8 +1968,8 @@ img {
 }
 
 .filter-section__checkbox:checked + .filter-section__checkbox-label::before {
-  -webkit-mask-image: url("/img/checkbox-on.svg");
-  mask-image: url("/img/checkbox-on.svg");
+  -webkit-mask-image: url("../img/checkbox-on.svg");
+  mask-image: url("../img/checkbox-on.svg");
   background-color: var(--checkbox-fill-color);
 }
 
